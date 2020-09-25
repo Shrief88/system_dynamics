@@ -23,4 +23,5 @@ x2′(t)= y′′(t) = x3(t)
 x3′(t)= y′′′(t) = γ(t)−a2y′′(t)−a2y′(t)−a0y(t) = γ(t)−a2*x3(t)−a1*x2(t)−a0*x1(t)  
 So we can use the state space matrices A and B so the equation will be  
  <p align="center"> x′(t)=A*x(t)+B*γ(t) </p>  
- $\begin{bmatrix}a & b\\c & d\end{bmatrix}$
+ $$\begin{pmatrix}a & b\\\ c & d\end{pmatrix}$$
+
