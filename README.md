@@ -14,9 +14,9 @@ say the user enter equation like that:
 <p align="center">  𝑑3𝑦(𝑡)𝑑𝑡+𝑎2𝑑2𝑦(𝑡)𝑑𝑡+𝑎1𝑑𝑦(𝑡)𝑑𝑡+𝑎0𝑦(𝑡)=𝑢(𝑡)+𝑏1𝑑𝑢(𝑡)𝑑𝑡 𝑤ℎ𝑒𝑟𝑒 𝑢(𝑡) 𝑖𝑠 𝑢𝑛𝑖𝑡 𝑠𝑡𝑒𝑝  </p>  
 
 First, we will divide the equation by a(n) to make sure that, the coefficient of 𝑑𝑛𝑦(𝑡)𝑑𝑡 will be zero Second, we are dealing with the derivatives of the input, In our code we represent unit step as a vector [..0 0 0 0 1 1 1 1...] and unit impulse as a vector [..0 0 0 0 (1/h) 0 0 0...] where h is the step size, and based on the input type which user input we generate the input vector and get the derivatives of this vector so if m = 1 we get 𝑑𝑢(𝑡)𝑑𝑡 and if m=2 we get 𝑑𝑢(𝑡)𝑑𝑡 and 𝑑2𝑢(𝑡)𝑑𝑡 , by multiply them by their coefficient and adding the result we get the input vector like in the equation above the input will be equal 𝑢(𝑡)+𝑏1𝑑𝑢(𝑡)𝑑𝑡 So the equation will be:                           
-                                             <p align="center"  𝑑3𝑦(𝑡)𝑑𝑡+𝑎2𝑑2𝑦(𝑡)𝑑𝑡+𝑎1𝑑𝑦(𝑡)𝑑𝑡+𝑎0𝑦(𝑡)=γ(t)=𝑖𝑛𝑝𝑢𝑡 𝑣𝑒𝑐𝑡𝑜𝑟 </p>
+                                             <p align="center">  𝑑3𝑦(𝑡)𝑑𝑡+𝑎2𝑑2𝑦(𝑡)𝑑𝑡+𝑎1𝑑𝑦(𝑡)𝑑𝑡+𝑎0𝑦(𝑡)=γ(t)=𝑖𝑛𝑝𝑢𝑡 𝑣𝑒𝑐𝑡𝑜𝑟 </p>
                                              
-We set the initial conditions for 𝑑2𝑦(𝑡)𝑑𝑡,𝑑𝑦(𝑡)𝑑𝑡,𝑦(𝑡) to be equal to zero and we introduce three new variables x1, x2, x3: 
+We set the initial conditions for 𝑑2𝑦(𝑡)𝑑𝑡,𝑑𝑦(𝑡)𝑑𝑡,𝑦(𝑡) to be equal to zero and we introduce three new variables x1, x2, x3:   
 𝑥1(𝑡)= 𝑦(𝑡) ,  
 𝑥2(𝑡)=𝑑𝑦(𝑡)𝑑𝑡 ,  
 x3(t)=𝑑2𝑦(𝑡)𝑑𝑡 x1′(t) = y′(t) = x2(t) x2′(t)= y′′(t) = x3(t)  
